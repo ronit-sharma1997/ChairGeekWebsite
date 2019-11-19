@@ -12,11 +12,6 @@ const SeatMap = ({tables, colorScale, toggleView, toggleFunction}) => {
                         width={50}
                     />}
 
-                <div className="custom-control custom-switch ml-1 d-none d-md-block">
-                    <input type="checkbox" className="custom-control-input" id="togglePreview"
-                    onChange={() => toggleFunction()}/>
-                    <label className="custom-control-label" htmlFor="togglePreview">Heatmap Samples</label>
-                </div>
 
                 {!toggleView && tables && tables.map(function (table, index) {
                     return(

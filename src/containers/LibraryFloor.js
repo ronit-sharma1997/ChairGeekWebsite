@@ -18,11 +18,12 @@ export default class LibraryFloor extends React.Component {
             floorState: floorState,
             tables: defaultTables,
             initialLoad: true,
-            heatMapToggle: false
+            heatMapToggle: false,
+            floorId: this.props.match.params.id
         }
 
-        chairGeekService.findAllTables(3, this.setTablesState)
-        chairGeekService.findFloorDetail(3, this.setFloorState)
+        chairGeekService.findAllTables(this.state.floorId, this.setTablesState)
+        chairGeekService.findFloorDetail(this.state.floorId, this.setFloorState)
     }
 
     // componentDidMount() {
@@ -39,8 +40,8 @@ export default class LibraryFloor extends React.Component {
     // }
 
     updatePage() {
-        chairGeekService.findAllTables(3, this.setTablesState)
-        chairGeekService.findFloorDetail(3, this.setFloorState)
+        chairGeekService.findAllTables(this.state.floorId, this.setTablesState)
+        chairGeekService.findFloorDetail(this.state.floorId, this.setFloorState)
     }
 
     setTablesState = tables => {
@@ -72,7 +73,7 @@ export default class LibraryFloor extends React.Component {
             <div>
         <LibraryFloorNavBar/>
         <br/>
-        <h3 className="mr-3">Floor 3</h3>
+        <h3 className="mr-3">Floor {this.state.floorId}</h3>
 
                 <div className="libraryInfo mt-5">
                     <div className="circleSizeLibrary">
@@ -90,6 +91,11 @@ export default class LibraryFloor extends React.Component {
                 {!this.state.heatMapToggle && <b className="float-right mr-5">Available</b>}
 
 
+                <div className="custom-control custom-switch d-none d-md-block" style={{"height" : "20px"}}>
+                    <input type="checkbox" className="custom-control-input" id="togglePreview"
+                           onChange={() => this.toggleHeatmapButton()}/>
+                    <label className="custom-control-label" htmlFor="togglePreview">Heatmap Samples</label>
+                </div>
 
                 <SeatMap tables={this.state.tables} colorScale={colorScale} toggleView={this.state.heatMapToggle} toggleFunction={this.toggleHeatmapButton}></SeatMap>
 
