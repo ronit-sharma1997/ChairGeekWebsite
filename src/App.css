@@ -94,7 +94,7 @@
     margin-bottom: 10px;
   }
   .empty-seat{
-    background-color: #4CAF50;
+    background-color: #4aa7f5;
     color:white;
     text-align:center;
     line-height: 70px;
@@ -108,7 +108,7 @@
     height:70px;
   }
   .taken-seat{
-    background-color: #f44336;
+    background-color: #bababa;
     color:black;
     text-align:center;
     line-height: 70px;
@@ -146,7 +146,7 @@
     background-color: #3F51B5;
 
   }
-  .table{
+  .tableEmpty{
     width: 90%;
     margin: 0 auto;
     text-align:center;
@@ -154,7 +154,51 @@
     height: 100px;
     border-radius: 10px;
     color:white;
-    background-color: #3F51B5;
+    background-color: #43a047;
+
+  }
+  .tableOneAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 100px;
+    height: 100px;
+    border-radius: 10px;
+    color:white;
+    background-color: #e8e04d;
+
+  }
+  .tableTwoAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 100px;
+    height: 100px;
+    border-radius: 10px;
+    color:white;
+    background-color: #e8ad4d;
+
+  }
+  .tableThreeAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 100px;
+    height: 100px;
+    border-radius: 10px;
+    color:white;
+    background-color: #de732c;
+
+  }
+  .tableFourAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 100px;
+    height: 100px;
+    border-radius: 10px;
+    color:white;
+    background-color: #eb291e;
 
   }
 }
@@ -167,7 +211,7 @@
     margin-bottom: 10px;
   }
   .empty-seat{
-    background-color: #4CAF50;
+    background-color: #4aa7f5;
     color:white;
     text-align:center;
     line-height: 40px;
@@ -181,7 +225,7 @@
     height:40px;
   }
   .taken-seat{
-    background-color: #f44336;
+    background-color: #bababa;
     color:black;
     text-align:center;
     line-height: 40px;
@@ -219,7 +263,7 @@
     background-color: #3F51B5;
 
   }
-  .table{
+  .tableEmpty{
     width: 90%;
     margin: 0 auto;
     text-align:center;
@@ -227,9 +271,58 @@
     height: 70px;
     border-radius: 10px;
     color:white;
-    background-color: #3F51B5;
+    background-color: #43a047;
 
   }
+
+  .tableOneAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 70px;
+    height: 70px;
+    border-radius: 10px;
+    color:white;
+    background-color: #e8e04d;
+
+  }
+
+  .tableTwoAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 70px;
+    height: 70px;
+    border-radius: 10px;
+    color:white;
+    background-color: #e8ad4d;
+
+  }
+
+  .tableThreeAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 70px;
+    height: 70px;
+    border-radius: 10px;
+    color:white;
+    background-color: #de732c;
+
+  }
+
+  .tableFourAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 70px;
+    height: 70px;
+    border-radius: 10px;
+    color:white;
+    background-color: #eb291e;
+
+  }
+
 }
 
 .circleSizeLibrary {
@@ -252,4 +345,22 @@
   margin-bottom:15px;
   font-size: 18px;
   font-weight: bold;
+}
+.seating-area {
+  width: 100%;
+  max-width: 100%;
+  background-color: #ECEFF1;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.four-seats{
+  display:flex;
+  margin: 4%;
+  width:25%;
+  max-width: 300px;
+  flex-wrap: wrap;
+  background-color: #CFD8DC;
 }
