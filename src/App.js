@@ -1,14 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../node_modules/font-awesome/css/font-awesome.min.css'
+import ChairGeekRoutingPage from "./components/ChairGeekRoutingPage";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Hello ChairGeek</h1>
-	<h2> sup boys </h2>
-    </div>
-  );
+    return (
+        <div className="App">
+            <ChairGeekRoutingPage/>
+        </div>
+    );
 }
 
 export default App;
+

@@ -20,3 +20,347 @@
 .App-link {
   color: #09d3ac;
 }
+.wbdv-hamburger {
+  color: white;
+  padding-right: 1rem;
+}
+
+.floating-action-button {
+  background: none;
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  border: none;
+  color: #007bff;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.floating-action-button:hover {
+  transform: scale(1.2);
+  outline: none;
+}
+
+.floating-action-button:focus {
+  outline: none;
+}
+
+.format-buttons {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.wbdv-grid-layout {
+  border-color: transparent;
+  background-color: transparent;
+  height: 100%;
+}
+
+.wbdv-list-layout {
+  border-color: transparent;
+  background-color: transparent;
+  height: 100%;
+}
+
+.header-icon {
+  color: black;
+}
+
+.wbdv-new-course-form {
+  flex-flow: unset;
+}
+
+.wbdv-delete {
+  border-color: transparent;
+  float: right;
+  color: black;
+}
+
+.wbdv-edit {
+  border: none;
+  float: right;
+}
+
+@media only screen and (min-width:501px){
+  .libraryInfo{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    margin:0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .empty-seat{
+    background-color: #4aa7f5;
+    color:white;
+    text-align:center;
+    line-height: 70px;
+    border-radius: 20px;
+    font-size: 24px;
+    width:30%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    height:70px;
+  }
+  .taken-seat{
+    background-color: #bababa;
+    color:black;
+    text-align:center;
+    line-height: 70px;
+    border-radius: 20px;
+    font-size: 24px;
+    width:30%;
+    margin: 10%;
+    height:70px;
+  }
+  .table-container {
+    width: 100%;
+  }
+  .half-table-top {
+    width: 90%;
+    margin: 0 auto;
+
+    text-align:center;
+    line-height: 35px;
+    height: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color:white;
+    background-color: #3F51B5;
+
+  }
+  .half-table-bottom {
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 70px;
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color:white;
+    background-color: #3F51B5;
+
+  }
+  .tableEmpty{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 100px;
+    height: 100px;
+    border-radius: 10px;
+    color:white;
+    background-color: #43a047;
+
+  }
+  .tableOneAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 100px;
+    height: 100px;
+    border-radius: 10px;
+    color:white;
+    background-color: #e8e04d;
+
+  }
+  .tableTwoAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 100px;
+    height: 100px;
+    border-radius: 10px;
+    color:white;
+    background-color: #e8ad4d;
+
+  }
+  .tableThreeAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 100px;
+    height: 100px;
+    border-radius: 10px;
+    color:white;
+    background-color: #de732c;
+
+  }
+  .tableFourAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 100px;
+    height: 100px;
+    border-radius: 10px;
+    color:white;
+    background-color: #eb291e;
+
+  }
+}
+@media only screen and (max-width: 500px) {
+  .libraryInfo{
+    width: 100%;
+    display: flex;
+    margin:0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .empty-seat{
+    background-color: #4aa7f5;
+    color:white;
+    text-align:center;
+    line-height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    width:30%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    height:40px;
+  }
+  .taken-seat{
+    background-color: #bababa;
+    color:black;
+    text-align:center;
+    line-height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    width:30%;
+    margin: 10%;
+    height:40px;
+  }
+  .table-container {
+    width: 100%;
+  }
+  .half-table-top {
+    width: 90%;
+    margin: 0 auto;
+
+    text-align:center;
+    line-height: 35px;
+    height: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color:white;
+    background-color: #3F51B5;
+
+  }
+  .half-table-bottom {
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 70px;
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color:white;
+    background-color: #3F51B5;
+
+  }
+  .tableEmpty{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 70px;
+    height: 70px;
+    border-radius: 10px;
+    color:white;
+    background-color: #43a047;
+
+  }
+
+  .tableOneAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 70px;
+    height: 70px;
+    border-radius: 10px;
+    color:white;
+    background-color: #e8e04d;
+
+  }
+
+  .tableTwoAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 70px;
+    height: 70px;
+    border-radius: 10px;
+    color:white;
+    background-color: #e8ad4d;
+
+  }
+
+  .tableThreeAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 70px;
+    height: 70px;
+    border-radius: 10px;
+    color:white;
+    background-color: #de732c;
+
+  }
+
+  .tableFourAvailable{
+    width: 90%;
+    margin: 0 auto;
+    text-align:center;
+    line-height: 70px;
+    height: 70px;
+    border-radius: 10px;
+    color:white;
+    background-color: #eb291e;
+
+  }
+
+}
+
+.circleSizeLibrary {
+  width:30%;
+  margin-right:10%;
+  margin-left:10%;
+}
+
+.infoText{
+  width:50%;
+  display:flex;
+  align-items:center;
+}
+.infoTextinner{
+  width:100%;
+}
+
+.spaceText{
+  width:100%;
+  margin-bottom:15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.seating-area {
+  width: 100%;
+  max-width: 100%;
+  background-color: #ECEFF1;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.four-seats{
+  display:flex;
+  margin: 4%;
+  width:25%;
+  max-width: 300px;
+  flex-wrap: wrap;
+  background-color: #CFD8DC;
+}
