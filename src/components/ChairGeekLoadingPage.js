@@ -7,9 +7,8 @@ import Logo from '../chair_geek_logo.jpg'
 import LibraryPic from '../petracca_photo_for_news.jpg'
 import {Link} from 'react-router-dom'
 
-//header and footer components
-import TransparentFooter from "/TransparentFooter.js";
-import ExamplesNavBar from "/ExamplesNavbar.js";
+//header components
+import ProfilePageHeader from "/ProfilePageHeader.js";
 
 const ChairGeekLoadingPage = () =>
     <div>
