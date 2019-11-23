@@ -28,23 +28,30 @@ function ProfilePageHeader() {
         filter-color="blue"
       >
         <Container>
-          <div className="content">
-            <div className="social-description">
+          <div className="button-container">
+            <Button className="btn-neutral" color="default" outline type="button" size="lg">
               <h2>Floor 1</h2>
               <p>XX% Full</p>
-            </div>
-            <div className="social-description">
+             </Button>
+          </div>
+          <div className="button-container">
+            <Button className="btn-neutral" color="default" outline type="button" size="lg">
               <h2>Floor 2</h2>
               <p>XX% Full</p>
-            </div>
-            <div className="social-description">
+             </Button>
+          </div>    
+          <div className="button-container">
+            <Button className="btn-neutral" color="default" outline type="button" size="lg">
               <h2>Floor 3</h2>
               <p>XX% Full</p>
-            </div>
-            <div className="social-description">
+             </Button>
+          </div>
+          <div className="button-container">
+            <Button className="btn-neutral" color="default" outline type="button" size="lg">
               <h2>Floor 4</h2>
               <p>XX% Full</p>
-            </div>
+             </Button>
+          </div>    
           </div>
         </Container>
       </div>
