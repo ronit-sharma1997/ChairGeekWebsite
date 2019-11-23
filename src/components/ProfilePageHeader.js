@@ -27,31 +27,23 @@ function ProfilePageHeader() {
         className="page-header clear-filter page-header-small"
         filter-color="blue"
       >
-        <div
-          className="page-header-image"
-          style={{
-            backgroundImage: "url(" + require("assets/img/bg5.jpg") + ")"
-          }}
-          ref={pageHeader}
-        ></div>
         <Container>
-          <div className="photo-container">
-            <img alt="..." src={require("assets/img/ryan.jpg")}></img>
-          </div>
-          <h3 className="title">Ryan Scheinder</h3>
-          <p className="category">Photographer</p>
           <div className="content">
             <div className="social-description">
-              <h2>26</h2>
-              <p>Comments</p>
+              <h2>Floor 1</h2>
+              <p>XX% Full</p>
             </div>
             <div className="social-description">
-              <h2>26</h2>
-              <p>Comments</p>
+              <h2>Floor 2</h2>
+              <p>XX% Full</p>
             </div>
             <div className="social-description">
-              <h2>48</h2>
-              <p>Bookmarks</p>
+              <h2>Floor 3</h2>
+              <p>XX% Full</p>
+            </div>
+            <div className="social-description">
+              <h2>Floor 4</h2>
+              <p>XX% Full</p>
             </div>
           </div>
         </Container>
