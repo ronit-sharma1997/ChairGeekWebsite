@@ -17,10 +17,10 @@ const ChairGeekLoadingPage = () =>
             bg="white"
             backgroundImage={LibraryPic}
         >
-            <Image src={Logo} style={{"width": "20%"}}/>
+            //<Image src={Logo} style={{"width": "20%"}}/>
             <Section
-                heading='ChairGeek'
-                subhead='The Future of Library Seat Detection'
+                heading='Snell Library'
+                subhead='Northeastern University'
                 width={1}
             >
 
