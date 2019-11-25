@@ -8,7 +8,7 @@ import LibraryPic from '../petracca_photo_for_news.jpg'
 import {Link} from 'react-router-dom'
 
 //header components
-import ProfilePageHeader from "/ProfilePageHeader.js";
+import ProfilePageHeader from "./ProfilePageHeader.js";
 
 const ChairGeekLoadingPage = () =>
     <div>
@@ -17,7 +17,7 @@ const ChairGeekLoadingPage = () =>
             bg="white"
             backgroundImage={LibraryPic}
         >
-            //<Image src={Logo} style={{"width": "20%"}}/>
+            <Image src={Logo} style={{"width": "20%"}}/>
             <Section
                 heading='Snell Library'
                 subhead='Northeastern University'
