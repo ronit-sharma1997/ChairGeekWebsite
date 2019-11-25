@@ -13,7 +13,7 @@ export default class HeatMap extends React.Component {
 
     componentDidMount() {
         let hm;
-        let margin = { top: 30, right: 30, bottom: 50, left: 30 },
+        let margin = {top: 30, right: 30, bottom: 50, left: 30},
             width = 450 - margin.left - margin.right,
             height = 450 - margin.top - margin.bottom;
         // append the svg object to the div of the component
@@ -70,24 +70,30 @@ export default class HeatMap extends React.Component {
             .data(hm)
             .enter()
             .append("rect")
-            .attr("x", function(d) {return x(d.x.toString())})
-            .attr("y", function(d) {return y(d.y.toString())})
+            .attr("x", function (d) {
+                return x(d.x.toString())
+            })
+            .attr("y", function (d) {
+                return y(d.y.toString())
+            })
             .attr("width", x.bandwidth())
             .attr("height", y.bandwidth())
-            .style("fill", function(d) {return myColor(Math.floor(d.val * 100))})
+            .style("fill", function (d) {
+                return myColor(Math.floor(d.val * 100))
+            })
 
     }
 
     render() {
 
-        return(
+        return (
             <div className="heatmap-background">
                 <div className="table-container">
                     <button className="btn-sm icon-button float-left"><i
                         className="fa fa-times fa-2x" onClick={() => this.props.toggleView()}></i></button>
                     <h1>Table {this.props.table.tableId}</h1>
                 </div>
-                    <div className="pl-2" ref="heatmap"/>
+                <div className="pl-2" ref="heatmap"/>
             </div>
         )
     }

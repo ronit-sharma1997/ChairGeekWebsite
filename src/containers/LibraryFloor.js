@@ -1,14 +1,17 @@
 import React from 'react'
 import LibraryFloorNavBar from "../components/LibraryFloorNavBar";
-import { Circle } from 'rc-progress';
+import { Circle } from 'react-circle';
 import SeatMap from "../components/SeatMap";
 import ChairGeekService from "../services/ChairGeekService";
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import LibraryTableHeatmap from "../components/LibraryTableHeatmap";
+import {
+    Hero, CallToAction, ScrollDownIndicator, Section, Feature
+} from 'react-landing-page'
+import LibraryPic from "../petracca_photo_for_news.jpg";
+import {Heading, Image, Flex} from 'rebass'
 
 const chairGeekService = ChairGeekService.getInstance();
 
-const colorScale = ['#eb291e','#de732c','#e8ad4d', '#e8e04d', '#43a047'];
+const colorScale = ['#eb291e','#de732c','#e8ad4d', '#7ea043', '#43a047'];
 
 export default class LibraryFloor extends React.Component {
     constructor(props) {
@@ -69,9 +72,18 @@ export default class LibraryFloor extends React.Component {
 
                 {this.state.floorId == 3 && <div className="libraryInfo mt-5">
                     <div className="circleSizeLibrary">
-                        <Circle percent={this.state.floorState.numPeople/this.state.floorState.tableCapacity *100} strokeWidth="10" trailWidth="10" trailColor="#43A047"
-                                strokeColor="#eb291e"/>
-                        <h2 className="pl-3 center-block">{this.state.floorState.numPeople/this.state.floorState.tableCapacity * 100}%</h2>
+                        <Circle progress={this.state.floorState.numPeople/this.state.floorState.tableCapacity *100}
+                                strokeWidth="10" trailWidth="10"
+                                bgColor="#43A047"
+                                progressColor="#eb291e"
+                                animate={true}
+                                animationDuration="1s"
+                                size={200}
+                                textColor="black"
+                                textStyle={{
+                                    font: 'bold 5rem Helvetica Neue, Helvetica, Arial, sans-serif' // CSSProperties: Custom styling for percentage.
+                                }}/>
+                        {/*<h2 className="pl-3 center-block">{this.state.floorState.numPeople/this.state.floorState.tableCapacity * 100}%</h2>*/}
                     </div>
                     <div className="infoText mt-4">
                         <div className="infoTextinner">
@@ -85,6 +97,21 @@ export default class LibraryFloor extends React.Component {
 
 
                 {this.state.floorId == 3 && <SeatMap tables={this.state.tables} colorScale={colorScale}></SeatMap>}
+
+                {this.state.floorId != 3 &&<div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                <Flex flexWrap="wrap" justifyContent="center">
+                    <Feature icon=" 🛠️" description="">
+                    COMING SOON TO A FLOOR NEAR YOU
+                    </Feature>
+                    </Flex>
+                </div>
+                }
 
             </div>
         )
