@@ -30,18 +30,18 @@ export default class LibraryFloor extends React.Component {
         chairGeekService.findFloorDetail(this.state.floorId, this.setFloorState)
     }
 
-    // componentDidMount() {
-    //     this.timer = setInterval(
-    //         () => this.updatePage(),
-    //         10000
-    //     )
-    //     console.log("didMount")
-    //     this.updatePage()
-    // }
-    //
-    // componentWillUnmount() {
-    //     clearInterval(this.timer)
-    // }
+    componentDidMount() {
+        this.timer = setInterval(
+            () => this.updatePage(),
+            10000
+        )
+        console.log("didMount")
+        this.updatePage()
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timer)
+    }
 
     updatePage() {
         chairGeekService.findAllTables(this.state.floorId, this.setTablesState)
