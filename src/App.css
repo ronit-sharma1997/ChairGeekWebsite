@@ -165,7 +165,7 @@
     height: 100px;
     border-radius: 10px;
     color:white;
-    background-color: #e8e04d;
+    background-color: #7ea043;
 
   }
   .tableTwoAvailable{
@@ -283,7 +283,7 @@
     height: 70px;
     border-radius: 10px;
     color:white;
-    background-color: #e8e04d;
+    background-color: #7ea043;
 
   }
 
@@ -360,7 +360,26 @@
   display:flex;
   margin: 4%;
   width:25%;
-  max-width: 300px;
+  max-width: 350px;
   flex-wrap: wrap;
   background-color: #CFD8DC;
 }
+.icon{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon-button {
+  border: none;
+  background-color: transparent;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.heatmap-background{
+  margin: 4%;
+  width:500px;
+  flex-wrap: wrap;
+  background-color: #CFD8DC;
+}
+
