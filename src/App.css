@@ -360,7 +360,26 @@
   display:flex;
   margin: 4%;
   width:25%;
-  max-width: 300px;
+  max-width: 350px;
   flex-wrap: wrap;
   background-color: #CFD8DC;
 }
+.icon{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon-button {
+  border: none;
+  background-color: transparent;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.heatmap-background{
+  margin: 4%;
+  width:500px;
+  flex-wrap: wrap;
+  background-color: #CFD8DC;
+}
+

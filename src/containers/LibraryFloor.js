@@ -1,9 +1,10 @@
 import React from 'react'
 import LibraryFloorNavBar from "../components/LibraryFloorNavBar";
 import { Circle } from 'rc-progress';
-import SeatMap from "./SeatMap";
+import SeatMap from "../components/SeatMap";
 import ChairGeekService from "../services/ChairGeekService";
-import {Colorscale} from 'react-colorscales';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import LibraryTableHeatmap from "../components/LibraryTableHeatmap";
 
 const chairGeekService = ChairGeekService.getInstance();
 
@@ -59,15 +60,6 @@ export default class LibraryFloor extends React.Component {
         }))
     }
 
-    toggleHeatmapButton = () => {
-        this.setState(prevState => ({
-            ...prevState,
-            heatMapToggle: !prevState.heatMapToggle
-        }))
-
-        console.log(this.state.heatMapToggle)
-    }
-
     render() {
         return(
             <div>
@@ -75,9 +67,10 @@ export default class LibraryFloor extends React.Component {
         <br/>
         <h3 className="mr-3">Floor {this.state.floorId}</h3>
 
-                <div className="libraryInfo mt-5">
+                {this.state.floorId == 3 && <div className="libraryInfo mt-5">
                     <div className="circleSizeLibrary">
-                        <Circle percent={this.state.floorState.numPeople/this.state.floorState.tableCapacity *100} strokeWidth="10" trailWidth="10" strokeColor="#43A047 "/>
+                        <Circle percent={this.state.floorState.numPeople/this.state.floorState.tableCapacity *100} strokeWidth="10" trailWidth="10" trailColor="#43A047"
+                                strokeColor="#eb291e"/>
                         <h2 className="pl-3 center-block">{this.state.floorState.numPeople/this.state.floorState.tableCapacity * 100}%</h2>
                     </div>
                     <div className="infoText mt-4">
@@ -86,18 +79,12 @@ export default class LibraryFloor extends React.Component {
                             <div className="spaceText"> Capacity: {this.state.floorState.tableCapacity}</div>
                         </div>
                     </div>
-                </div>
-                {!this.state.heatMapToggle && <b className="float-left ml-5">Not Available</b>}
-                {!this.state.heatMapToggle && <b className="float-right mr-5">Available</b>}
+                </div>}
+                {this.state.floorId == 3 && <b className="float-left ml-5">Not Available</b>}
+                {this.state.floorId == 3 && <b className="float-right mr-5">Available</b>}
 
 
-                <div className="custom-control custom-switch d-none d-md-block" style={{"height" : "20px"}}>
-                    <input type="checkbox" className="custom-control-input" id="togglePreview"
-                           onChange={() => this.toggleHeatmapButton()}/>
-                    <label className="custom-control-label" htmlFor="togglePreview">Heatmap Samples</label>
-                </div>
-
-                <SeatMap tables={this.state.tables} colorScale={colorScale} toggleView={this.state.heatMapToggle} toggleFunction={this.toggleHeatmapButton}></SeatMap>
+                {this.state.floorId == 3 && <SeatMap tables={this.state.tables} colorScale={colorScale}></SeatMap>}
 
             </div>
         )
