@@ -1,37 +1,96 @@
 import React from 'react'
-import {Heading, Image, Flex} from 'rebass'
 import {
-    Hero, CallToAction, ScrollDownIndicator, Section, Feature
+    Heading, Image, Flex, Box, Absolute, NavLink
+} from 'rebass'
+import {
+   Hero, CallToAction, ScrollDownIndicator, Section, Feature
 } from 'react-landing-page'
 import Logo from '../chair_geek_logo.jpg'
 import LibraryPic from '../petracca_photo_for_news.jpg'
 import {Link} from 'react-router-dom'
+import {
+	Button
+} from "reactstrap";
 
-//header components
-import ProfilePageHeader from "/ProfilePageHeader.js";
+import LandingPageNavBar from "./LandingPageNavBar.js";
+import LibraryFloorNavBar from "./LandingPageNavBar.js";
+
 
 const ChairGeekLoadingPage = () =>
+ <>
     <div>
         <Hero
             color="black"
             bg="white"
             backgroundImage={LibraryPic}
-        >
-            //<Image src={Logo} style={{"width": "20%"}}/>
-            <Section
-                heading='Snell Library'
-                subhead='Northeastern University'
+	>
+	   <Section
                 width={1}
             >
-
-            </Section>
+		<Image src={Logo} style={{"width": "30%"}} />
+		<br/>
+		<Flex flexWrap="wrap">
+		    <h2 className="text-danger"> Snell Library @ Northeastern University </h2>		
+		</Flex>	 	
+		<br/>
+		<Flex flexWrap="wrap">
+		  <CallToAction bg="defaul">
+		    <Link to={'/Floor/1'}>
+			<Button
+				className="btn-round"
+				color="danger"
+				size="lg"				
+				outline type="button">
+				  <h3> Floor 1 </h3>
+				  <h6> XX% Full </h6>
+			</Button>
+		    </Link>
+		  </CallToAction>
+		  <CallToAction bg="default">
+		    <Link to={'/Floor/2'}>
+			<Button
+				className="btn-round"
+				color="danger"
+				size="lg"
+				outline type="button">
+				  <h3> Floor 2 </h3>
+				  <h6> xx% Full </h6>
+			</Button>
+		    </Link>
+		  </CallToAction>
+		  <CallToAction bg="default">
+		    <Link to={'/Floor/3'}>
+			<Button
+				className="btn-round"
+				color="danger"
+				size="lg"
+				outline type="button">
+				  <h3> Floor 3 </h3>
+				  <h6> XX% Full </h6>
+			</Button>
+		    </Link>
+		  </CallToAction>
+		  <CallToAction bg="default">
+		    <Link to={'/Floor/4'}>
+			<Button
+				className="btn-round"
+				color="danger"
+				size="lg"
+				outline type="button">
+				  <h3> Floor 4 </h3>
+				  <h6> XX% Full </h6>
+			</Button>
+		    </Link>
+		  </CallToAction>
+		</Flex>
+              </Section> 
             <ScrollDownIndicator/>
         </Hero>
 
         <br/>
-        <Heading textAlign="center">Key Features</Heading>
+        <Heading textAlign="center">What is ChairGeek?</Heading>
         <Flex flexWrap="wrap" justifyContent="center">
-            <Feature icon="⌛" description="Real Time Seat Detection">
+            <Feature icon="⌛" description="Real Time Infrared Detection">
                 Live Detection
             </Feature>
             <Feature icon="📚" description="Catered to Snell Library">
@@ -42,28 +101,7 @@ const ChairGeekLoadingPage = () =>
             </Feature>
         </Flex>
 
-
-        <Heading textAlign="center">Floor Breakdown</Heading>
-        <br/>
-        <Flex flexWrap="wrap" justifyContent="center">
-            <div className="ml-4 mr-4">
-        <CallToAction><Link to={`/Floor/1`}>
-            Floor 1</Link></CallToAction>
-            </div>
-            <div className="mr-4">
-                <CallToAction><Link to={`/Floor/2`}>
-                    Floor 2</Link></CallToAction>
-            </div>
-            <div className="mr-4">
-                <CallToAction><Link to={`/Floor/3`}>
-                    Floor 3</Link></CallToAction>
-            </div>
-            <div className="mr-4">
-                <CallToAction><Link to={`/Floor/4`}>
-                    Floor 4</Link></CallToAction>
-            </div>
-        </Flex>
     <br/>
-
     </div>
+ </>
 export default ChairGeekLoadingPage
