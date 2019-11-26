@@ -43,6 +43,15 @@ export default class LibraryFloor extends React.Component {
         clearInterval(this.timer)
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (this.props.match.params.id != nextProps.match.params.id) {
+            // console.log("change in id", nextProps.match.params.id)
+            this.setState(prevState => ({
+                floorId: nextProps.match.params.id
+            }))
+        }
+    }
+
     updatePage() {
         chairGeekService.findAllTables(this.state.floorId, this.setTablesState)
         chairGeekService.findFloorDetail(this.state.floorId, this.setFloorState)
@@ -68,8 +77,8 @@ export default class LibraryFloor extends React.Component {
             <div>
         <LibraryFloorNavBar/>
         <br/>
-        <h3 className="mr-3">Floor {this.state.floorId}</h3>
 
+	<h3 className="mr-3">Floor {this.state.floorId}</h3> 
                 {this.state.floorId == 3 && <div className="libraryInfo mt-5">
                     <div className="circleSizeLibrary">
                         <Circle progress={this.state.floorState.numPeople/this.state.floorState.tableCapacity *100}
@@ -118,3 +127,4 @@ export default class LibraryFloor extends React.Component {
     }
 
 }
+
