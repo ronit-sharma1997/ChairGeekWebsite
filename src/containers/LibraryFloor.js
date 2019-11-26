@@ -33,7 +33,7 @@ export default class LibraryFloor extends React.Component {
     componentDidMount() {
         this.timer = setInterval(
             () => this.updatePage(),
-            10000
+            2000
         )
         console.log("didMount")
         this.updatePage()
@@ -49,6 +49,8 @@ export default class LibraryFloor extends React.Component {
     }
 
     setTablesState = tables => {
+        console.log("Tables from floor:")
+        console.log(tables)
         this.setState(prevState => ({
         ...prevState,
         tables: tables.tables,
@@ -56,6 +58,7 @@ export default class LibraryFloor extends React.Component {
     }
 
     setFloorState = floor => {
+        console.log("Total Floor Stats")
         console.log(floor)
         this.setState(prevState => ({
             ...prevState,
