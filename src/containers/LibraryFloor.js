@@ -72,7 +72,7 @@ export default class LibraryFloor extends React.Component {
 
                 {this.state.floorId == 3 && <div className="libraryInfo mt-5">
                     <div className="circleSizeLibrary">
-                        <Circle progress={this.state.floorState.numPeople/this.state.floorState.tableCapacity *100}
+                        <Circle progress={this.state.floorState.numPeople/this.state.floorState.floorCapacity *100}
                                 strokeWidth="10" trailWidth="10"
                                 bgColor="#43A047"
                                 progressColor="#eb291e"
@@ -83,12 +83,11 @@ export default class LibraryFloor extends React.Component {
                                 textStyle={{
                                     font: 'bold 5rem Helvetica Neue, Helvetica, Arial, sans-serif' // CSSProperties: Custom styling for percentage.
                                 }}/>
-                        {/*<h2 className="pl-3 center-block">{this.state.floorState.numPeople/this.state.floorState.tableCapacity * 100}%</h2>*/}
                     </div>
                     <div className="infoText mt-4">
                         <div className="infoTextinner">
-                            <div className="spaceText"> Available spaces: {this.state.floorState.tableCapacity - this.state.floorState.numPeople}</div>
-                            <div className="spaceText"> Capacity: {this.state.floorState.tableCapacity}</div>
+                            <div className="spaceText"> Available spaces: {this.state.floorState.floorCapacity - this.state.floorState.numPeople}</div>
+                            <div className="spaceText"> Capacity: {this.state.floorState.floorCapacity}</div>
                         </div>
                     </div>
                 </div>}
