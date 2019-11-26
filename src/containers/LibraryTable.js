@@ -31,8 +31,8 @@ export default class LibraryTable extends React.Component {
                         <i className="fa fa-info-circle fa-2x"></i>
                     </button>
                 </div>
-                <LibrarySeat seatAvailable={this.props.table.seatOccupation.charAt(0) === "0" ? true : false} seatId={1}/>
-                <LibrarySeat seatAvailable={this.props.table.seatOccupation.charAt(1) === "0" ? true : false} seatId={2}/>
+                <LibrarySeat seatAvailable={this.props.table.seatOccupation.charAt(0) === "0" ? true : false} tableId={this.props.table.tableId} seatId={1}/>
+                <LibrarySeat seatAvailable={this.props.table.seatOccupation.charAt(1) === "0" ? true : false} tableId={this.props.table.tableId} seatId={2}/>
                 <div className="table-container">
                     <div
                         className={peopleAvailable}>
@@ -40,8 +40,8 @@ export default class LibraryTable extends React.Component {
                         <h5 className="d-none d-md-block">{this.props.table.capacity - this.props.table.numPeople}/{this.props.table.capacity} Available</h5>
                     </div>
                 </div>
-                <LibrarySeat seatAvailable={this.props.table.seatOccupation.charAt(2) === "0" ? true : false} seatId={3}/>
-                <LibrarySeat seatAvailable={this.props.table.seatOccupation.charAt(3) === "0" ? true : false} seatId={4}/>
+                <LibrarySeat seatAvailable={this.props.table.seatOccupation.charAt(2) === "0" ? true : false} tableId={this.props.table.tableId} seatId={3}/>
+                <LibrarySeat seatAvailable={this.props.table.seatOccupation.charAt(3) === "0" ? true : false} tableId={this.props.table.tableId} seatId={4}/>
             </div>
         } else {
             return (
