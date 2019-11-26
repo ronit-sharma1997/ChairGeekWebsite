@@ -7,7 +7,6 @@ export default class LibraryTable extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            table: this.props.table,
             toggleView: true
         }
     }
@@ -32,27 +31,27 @@ export default class LibraryTable extends React.Component {
                         <i className="fa fa-info-circle fa-2x"></i>
                     </button>
                 </div>
-                <LibrarySeat seatAvailable={this.state.table.seatOccupation.charAt(0) === "0" ? true : false} seatId={1}/>
-                <LibrarySeat seatAvailable={this.state.table.seatOccupation.charAt(1) === "0" ? true : false} seatId={2}/>
+                <LibrarySeat seatAvailable={this.props.table.seatOccupation.charAt(0) === "0" ? true : false} seatId={1}/>
+                <LibrarySeat seatAvailable={this.props.table.seatOccupation.charAt(1) === "0" ? true : false} seatId={2}/>
                 <div className="table-container">
                     <div
                         className={peopleAvailable}>
-                        <h2>Table {this.state.table.tableId}</h2>
-                        <h5 className="d-none d-md-block">{this.state.table.capacity - this.state.table.numPeople}/{this.state.table.capacity} Available</h5>
+                        <h2>Table {this.props.table.tableId}</h2>
+                        <h5 className="d-none d-md-block">{this.props.table.capacity - this.props.table.numPeople}/{this.props.table.capacity} Available</h5>
                     </div>
                 </div>
-                <LibrarySeat seatAvailable={this.state.table.seatOccupation.charAt(2) === "0" ? true : false} seatId={3}/>
-                <LibrarySeat seatAvailable={this.state.table.seatOccupation.charAt(3) === "0" ? true : false} seatId={4}/>
+                <LibrarySeat seatAvailable={this.props.table.seatOccupation.charAt(2) === "0" ? true : false} seatId={3}/>
+                <LibrarySeat seatAvailable={this.props.table.seatOccupation.charAt(3) === "0" ? true : false} seatId={4}/>
             </div>
         } else {
             return (
-                <HeatMap table={this.state.table} toggleView={this.toggleButton}/>
+                <HeatMap table={this.props.table} toggleView={this.toggleButton}/>
             )
         }
     }
 
     render() {
-        const numberOfPeople = this.state.table.numPeople;
+        const numberOfPeople = this.props.table.numPeople;
         let peopleAvailable
         if (numberOfPeople === 0) {
             peopleAvailable = "tableEmpty"

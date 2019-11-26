@@ -4,6 +4,7 @@ import {Colorscale} from "react-colorscales";
 
 
 const SeatMap = ({tables, colorScale}) => {
+    console.log(tables)
         return (
             <div className="seating-area">
                 <Colorscale

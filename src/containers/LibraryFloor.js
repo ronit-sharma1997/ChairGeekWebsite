@@ -59,7 +59,8 @@ export default class LibraryFloor extends React.Component {
 
     setTablesState = tables => {
         console.log("Tables from floor:")
-        console.log(tables)
+        // console.log(tables)
+        console.log(tables.tables)
         this.setState(prevState => ({
         ...prevState,
         tables: tables.tables,
