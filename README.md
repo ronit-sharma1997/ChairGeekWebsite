@@ -1,4 +1,6 @@
-Web App developed for Northeastern Electrical/Computer Engineering Capstone Project ChairGeek
+Web App developed for Northeastern Electrical/Computer Engineering Capstone Project ChairGeek.
+
+In order to help Northeastern students find a seat in the crowded Snell Library, the ChairGeek team designed a proof-of-concept for a system that senses the fullness of seats in the library and displays this availability to students.  To further define this problem, ChairGeek decided to work with standard library table sizes and standard ceiling height, evaluating an unknown number of students at each table. To this end, they designed a ceiling-mounted device using an infrared sensor grid and a Raspberry Pi to process and communicate data as well as a website to display data.
 
 Demo Video: https://drive.google.com/file/d/1ShE0q-8uqXIkyxyVYM8SQNiQD6hOvacd/view?usp=sharing
 
