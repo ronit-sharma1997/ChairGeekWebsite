@@ -1,4 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Web App developed for Northeastern Electrical/Computer Engineering Capstone Project ChairGeek
+
+Demo Video: https://drive.google.com/file/d/1ShE0q-8uqXIkyxyVYM8SQNiQD6hOvacd/view?usp=sharing
+
+### Landing Page:
+
+![image1](https://user-images.githubusercontent.com/20268204/110346319-6ef5fb80-7ffd-11eb-9fdd-e21dffe921e1.png)
+
+
+### Floor Breakdown
+
+![image2](https://user-images.githubusercontent.com/20268204/110346373-7917fa00-7ffd-11eb-96fa-ac19c57fd1b2.png)
 
 ## Available Scripts
 
